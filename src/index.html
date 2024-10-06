@@ -60,8 +60,6 @@
             class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 flex flex-col items-center">
             <i class="fas fa-cog fa-lg"></i>
             <span class="block text-xs">Settings</span>
-            <button id="openBuy" class="bg-green-500 text-white px-4 py-2 rounded">Open Buy</button>
-            <button id="openSell" class="bg-red-500 text-white px-4 py-2 rounded">Open Sell</button>
         </a>
     </nav>
 
@@ -78,7 +76,7 @@
         });
 
         const tradesListEl = document.getElementById("trades-list");
-        const ws = new WebSocket("ws://localhost:8765");
+        const ws = new WebSocket("https://52fa-45-8-19-52.ngrok-free.app/trade");
 
         ws.onopen = function (event) {
             console.log("Connected to WebSocket");
